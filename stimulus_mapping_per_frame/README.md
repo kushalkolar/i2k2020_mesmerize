@@ -1,0 +1,1 @@
+Contains the script used for converting the behavioral data from ``Behavior2.csv`` which is given on a per-timepoint basis, to a dataframe which contains the behavioral mappings on a per-chunk/per-behavior basis with ``start`` and ``end`` frame indices for each behavior
