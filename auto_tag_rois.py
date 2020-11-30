@@ -14,6 +14,6 @@ for roi in roi_manager.manager.roi_list:
 
   # tag the ROI based on the centroid
   if ctr[0] > 250:
-    roi.set_tag('cell_type', 'type_lt_100')
+    roi.set_tag('cell_id', 'type_lt_100')
   else:
-    roi.set_tag('cell_type', 'type_gt_100')
+    roi.set_tag('cell_id', 'type_gt_100')

@@ -36,7 +36,7 @@ roi = roi_manager.manager.add_roi(
 )
 
 # set some tags to this newly created ROI
-#roi.set_tag('cell_id', 'type_A')
-#roi.set_tag('anatomical_location', 'rostral')
+roi.set_tag('cell_id', 'type_A')
+roi.set_tag('anatomical_location', 'rostral')
 
 # You can basically do this in a loop to add all ROIs derived from an external source
