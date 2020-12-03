@@ -62,13 +62,13 @@ for i, path in enumerate(files):
     # Keep your scripts very simple within a single scope, if you use functions 
     # you cannot easily access the viewer work environment attributes within them
 
-    df['Behavior'] = df['Behavior'].fillna('nothing')
+    df['Behavior'] = df['Behavior'].fillna('nothing')  # fill in the unlabelled frames
 
-    behavior_name_cmap = get_colormap(df['Behavior'].unique(), 'tab10', output='pyqt', alpha=0.6)
+    behavior_name_cmap = get_colormap(df['Behavior'].unique(), 'tab10', output='pyqt', alpha=0.6)  # map the behaviors to colors
 
-    stim_mapping_df = pd.DataFrame(columns=['start', 'stop', 'name', 'color'])
+    stim_mapping_df = pd.DataFrame(columns=['start', 'stop', 'name', 'color'])  # create an empty stimmap dataframe
 
-    for i, r in df.iterrows():
+    for i, r in df.iterrows():  # This loop converts "per-frame" labelled behaviors to "chunk-labelled" with start and end frame numbers for each behavioral period
         if i == 0:
             start = r['Time']
             behavior = r['Behavior']
