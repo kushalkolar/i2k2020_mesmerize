@@ -47,6 +47,9 @@ for i, path in enumerate(files):
 
     # name of the video file, use the same name for the csv behavior file	
     name = os.path.basename(path)[:-4]
+    
+    # get the csv file containing the behavioral data
+    # the csv file has the same name as the tiff file for the recording
     df = pd.read_csv(f'/work/kushal/i2k2020/I2K2020_testdata_AYUSO/{name}.csv')
 
     # get the framerate of the video
